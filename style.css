@@ -3,9 +3,12 @@
     --light: #f7eff3;
     --light-accent: #83b6bc;
     --dark: #36393b;
-    --dark-accent: #997b51;
+    --dark-accent: #43a358;
     --very-dark: #252728;
+    font-size: larger;
+    background-color: var(--light);
 }
+
 * {
     box-sizing: border-box;
 }
@@ -13,7 +16,7 @@ body, header {
     margin: 0;
 }
 
-header {
+header, footer {
     background-color: var(--dark);
     color: var(--light);
     margin-top: 0;
@@ -21,6 +24,7 @@ header {
     align-items: stretch;
     justify-content: space-between;
     flex-wrap: wrap;
+    border-bottom: var(--main) 8px solid;
 }
 #logo {
     width: max-content;
@@ -50,8 +54,86 @@ header {
 #navbar a:hover {
     background-color: var(--main);
     color: var(--dark);
+    text-shadow: 3px 0px var(--light-accent);
 }
 
-/* h1, h2, h3, h4, h5, h6 {
+#skills {
+    text-align: center;
+    width: 100%;
+}
+#skills > h1 {
+    margin-bottom: 5px;
+}
+#skills > div {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.skill-div {
+    margin: 10px 30px;
+    min-width: fit-content;
+    box-shadow: var(--light-accent) 5px 5px;
+}
+.skill-div h2 {
+    margin-bottom: 0;
+}
+.skill-div ul {
+    padding: 0;
+    list-style: none;
+}
+.skill-div li {
+    padding: 5px;
+}
+#skills .skill-div {
+    border-radius: 5px;
+    width: 300px;
+    color: var(--light);
+    background-color: var(--dark-accent);
+    padding: 5px 55px;
+}
+
+#projects {
+    background-color: var(--main);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.section > h1 {
+    text-align: center;
     color: var(--dark);
-} */
+    text-shadow: 4px 0px var(--light-accent);
+}
+.project {
+    /* min-width: fit-content; */
+    padding: 20px;
+    margin: auto;
+    background-color: var(--light);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    border-radius: 5px;
+    box-shadow: #36393b 5px 5px;
+}
+.project a {
+    color: var(--dark);
+    text-decoration: none;
+}
+.project a:hover, .project a:hover *{
+    text-shadow: 1px 1px var(--light-accent);
+    background-color: var(--main);
+}
+
+.content{
+    max-width: 800px;
+    margin: auto;
+}
+
+.section {
+    padding: 45px 0;
+}
+.section > * {
+    margin: 20px 20%;
+}
