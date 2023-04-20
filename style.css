@@ -5,12 +5,16 @@
     --dark: #36393b;
     --dark-accent: #43a358;
     --very-dark: #252728;
-    font-size: large;
+    font-size: larger;
     background-color: var(--light);
 }
 
 * {
     box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
 }
 main {
     scroll-snap-type: y mandatory;
@@ -170,7 +174,7 @@ header {
     scroll-snap-align: start;
 }
 .section > * {
-    margin: 20px 20%;
+    margin: 20px 10%;
 }
 footer {
     align-items: center;
