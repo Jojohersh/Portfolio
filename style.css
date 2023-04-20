@@ -5,13 +5,17 @@
     --dark: #36393b;
     --dark-accent: #43a358;
     --very-dark: #252728;
-    font-size: larger;
+    font-size: large;
     background-color: var(--light);
 }
 
 * {
     box-sizing: border-box;
 }
+main {
+    scroll-snap-type: y mandatory;
+}
+
 body, header {
     margin: 0;
 }
@@ -21,10 +25,12 @@ header, footer {
     color: var(--light);
     margin-top: 0;
     display: flex;
-    align-items: stretch;
-    justify-content: space-between;
     flex-wrap: wrap;
-    border-bottom: var(--main) 8px solid;
+    border-bottom: var(--main) 4px solid;
+}
+header {
+    align-items: stretch;
+    justify-content: flex-end;
 }
 #logo {
     width: max-content;
@@ -36,7 +42,7 @@ header, footer {
 }
 #logo h1 {
     padding-left: 20px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
 }
 
 #navbar {
@@ -50,11 +56,35 @@ header, footer {
     padding-left: 35px;
     padding-right: 35px;
     text-decoration: none;
+    flex-grow: 1;
 }
 #navbar a:hover {
     background-color: var(--main);
     color: var(--dark);
     text-shadow: 3px 0px var(--light-accent);
+}
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--light);
+    height: 500px;
+    padding: 0;
+
+    background-image:
+        linear-gradient( rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+        url("./indy-downtown.jpg");
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--very-dark);
+    overflow: hidden;
+}
+#hero h1 {
+    color: var(--light);
+    margin: 0;
+    font-size: 2.5rem;
 }
 
 #skills {
@@ -104,7 +134,6 @@ header, footer {
 .section > h1 {
     text-align: center;
     color: var(--dark);
-    text-shadow: 4px 0px var(--light-accent);
 }
 .project {
     /* min-width: fit-content; */
@@ -125,15 +154,31 @@ header, footer {
     text-shadow: 1px 1px var(--light-accent);
     background-color: var(--main);
 }
-
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .content{
-    max-width: 800px;
+    max-width: 700px;
     margin: auto;
 }
 
 .section {
-    padding: 45px 0;
+    padding: 25px 0 105px 0;
+    box-shadow: inset 0px 30px 60px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: start;
 }
 .section > * {
     margin: 20px 20%;
+}
+footer {
+    align-items: center;
+    justify-content: center;
+}
+.contact {
+    display: flex;
+    padding: 25px;
+    gap: 30px;
+    justify-content: space-evenly;
 }
