@@ -30,7 +30,7 @@ header, footer {
     margin-top: 0;
     display: flex;
     flex-wrap: wrap;
-    border-bottom: var(--main) 4px solid;
+    border-bottom: var(--dark-accent) 4px solid;
 }
 header {
     align-items: stretch;
@@ -56,7 +56,7 @@ header {
     flex-wrap:wrap;
 }
 #navbar a {
-    color: var(--main);
+    color: var(--light);
     padding-left: 35px;
     padding-right: 35px;
     text-decoration: none;
@@ -129,10 +129,13 @@ header {
 }
 
 #projects {
-    background-color: var(--main);
+    background-color: var(--light-accent);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+#projects > h1 {
+    color: var(--light);
 }
 
 .section > h1 {
@@ -148,7 +151,7 @@ header {
     flex-wrap: wrap;
     align-items: flex-end;
     border-radius: 5px;
-    box-shadow: #36393b 5px 5px;
+    box-shadow: var(--main) 5px 5px;
 }
 .project a {
     color: var(--dark);
